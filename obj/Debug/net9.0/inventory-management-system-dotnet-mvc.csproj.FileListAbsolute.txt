@@ -94,3 +94,4 @@
 /Users/barik/Desktop/dotnet/inventory-management-system-dotnet-mvc/obj/Debug/net9.0/inventory-management-system-dotnet-mvc.pdb
 /Users/barik/Desktop/dotnet/inventory-management-system-dotnet-mvc/obj/Debug/net9.0/inventory-management-system-dotnet-mvc.genruntimeconfig.cache
 /Users/barik/Desktop/dotnet/inventory-management-system-dotnet-mvc/obj/Debug/net9.0/ref/inventory-management-system-dotnet-mvc.dll
+/Users/barik/Desktop/dotnet/inventory-management-system-dotnet-mvc/obj/Debug/net9.0/inventory-management-system-dotnet-mvc.sourcelink.json
