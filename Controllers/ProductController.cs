@@ -19,7 +19,8 @@ namespace InventoryManagementSystem.Controllers
             _logger = logger;
         }
 
-        [HttpGet] 
+        // without comments this route will not work
+        [HttpGet("")] // ("") means /Product route - to /Product/Index
         [Route("Index")]
         public IActionResult Index()
         {

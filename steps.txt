@@ -45,3 +45,12 @@ status = enum {1,2,3}
 COMPLETED = 1
 TODO = 2
 INPROGRESS = 3
+
+
+
+pakcage lagbe change korle reflect korar jonno.
+NuGet Package manager diye install korte hobe
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+er por Program.cs file e,, add kora lagbe,,
+// change korle build sara kaj korbe browser e
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
