@@ -54,3 +54,33 @@ Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
 er por Program.cs file e,, add kora lagbe,,
 // change korle build sara kaj korbe browser e
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+
+// MySQL Database Connection - SETUP
+step-1: installing
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Pomelo.EntityFrameworkCore.MySql
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+step-2: update appsettings.json (default port 3306)
+"ConnectionStrings": { "Default": "Server=localhost;Database=IMSDB;User ID=root;Password=;" } 
+
+step-3: create folder Database/IMSDBContext.cs
+using Microsoft.EntityFrameworkCore;
+namespace InventoryManagementSystem.Models
+{
+    public class IMSDBContext : DbContext
+    {
+        public IMSDBContext(DbContextOptions<IMSDBContext> options) : base(options) { }
+
+        public DbSet<Product> Products { get; set; }
+    }
+}
+
+step-3: install required packages then run (db table will be created)
+dotnet ef migrations add AddCustomerTable
+dotnet ef database update
+-- done --
+
+
+

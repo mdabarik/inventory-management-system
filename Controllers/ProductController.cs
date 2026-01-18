@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using InventoryManagementSystem.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -24,7 +23,7 @@ namespace InventoryManagementSystem.Controllers
         [Route("Index")]
         public IActionResult Index()
         {
-            return View(ProductRepository.GetAll());
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

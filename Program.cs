@@ -1,9 +1,20 @@
+
+
+
+
+using InventoryManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<IMSDBContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("Default"),
+        new MySqlServerVersion(new Version(8, 0, 36))
+    ));
 
-// change korle build sara kaj korbe browser e
-builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddControllersWithViews()
+    .AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 
@@ -15,7 +26,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapStaticAssets();
@@ -24,6 +34,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();
