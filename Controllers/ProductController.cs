@@ -15,7 +15,6 @@ namespace InventoryManagementSystem.Controllers
             _context = context;
         }
 
-        // READ: List all products
         [HttpGet("")]
         [HttpGet("Index")]
         public IActionResult Index()
@@ -25,6 +24,7 @@ namespace InventoryManagementSystem.Controllers
             return View(products);
         }
 
+        /*
         // CREATE: Show form
         [HttpGet("Create")]
         public IActionResult Create()
@@ -88,6 +88,7 @@ namespace InventoryManagementSystem.Controllers
             }
             return RedirectToAction("Index");
         }
+        */
 
         // ERROR
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
