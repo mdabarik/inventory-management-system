@@ -1,4 +1,6 @@
 using InventoryManagementSystem.Data;
+using InventoryManagementSystem.Services.Contacts;
+using InventoryManagementSystem.Services.Implementations;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,8 @@ builder.Services.AddDbContext<IMSDBContext>(options =>
         builder.Configuration.GetConnectionString("Default"),
         new MySqlServerVersion(new Version(8, 0, 36))
     ));
+
+builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddControllersWithViews()
     .AddRazorRuntimeCompilation();

@@ -1,10 +1,23 @@
+@model IEnumerable<InventoryManagementSystem.Models.Product>
 
 <table>
-    <tr>
-        <th>Name</th>
-        <th>Quantity</th>
-        <th>Description</th>
-        <th>Price</th>
-    </tr>
-    
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Quantity</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+            </tr>
+        }
+    </tbody>
 </table>

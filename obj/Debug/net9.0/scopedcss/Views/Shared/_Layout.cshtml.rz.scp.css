@@ -47,10 +47,3 @@ button.accept-policy[b-30c67bdnw3] {
   white-space: nowrap;
   line-height: 60px;
 }
-
-.active-choco[b-30c67bdnw3] {
-  background-color: rgb(141, 62, 5);
-  color: white !important;
-  border-radius: 8px;
-  padding: 5px 10px;
-}

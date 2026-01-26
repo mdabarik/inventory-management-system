@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace InventoryManagementSystem.Controllers
 {
-
     public class CategoryController : Controller
     {
         private readonly ILogger<CategoryController> _logger;
