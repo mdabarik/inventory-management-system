@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - InventoryManagementSystem</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    @* <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> *@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/InventoryManagementSystem.styles.css" asp-append-version="true" />
 
@@ -24,17 +24,17 @@
                     <ul class="navbar-nav flex-grow-1">
                         
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Product" ? "text-yellow-900 rounded-lg" : "text-dark")"
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Product" ? "text-yellow rounded-lg" : "text-dark")"
                             asp-area="" asp-controller="Product" asp-action="Index">Product</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Category" ? "text-yellow-900 rounded-lg" : "text-dark")"
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Category" ? "text-yellow  rounded-lg" : "text-dark")"
                             asp-area="" asp-controller="Category" asp-action="Index">Category</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Supplier" ? "text-yellow-900 rounded-lg" : "text-dark")"
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Supplier" ? "text-yellow  rounded-lg" : "text-dark")"
                             asp-area="" asp-controller="Supplier" asp-action="Index">Supplier</a>
                         </li>
 
