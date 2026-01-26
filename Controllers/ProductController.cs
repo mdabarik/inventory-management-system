@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using InventoryManagementSystem.Models;
+using Microsoft.AspNetCore.Mvc.ActionConstraints;
 
 namespace InventoryManagementSystem.Controllers
 {
@@ -22,6 +23,16 @@ namespace InventoryManagementSystem.Controllers
             var products = _context.Products.ToList();
             
             return View(products);
+        }
+
+        public IActionConstraint Create()
+            PopulateDropdown();
+            return View();
+        }
+
+        private void PopulateDropdown()
+        {
+            var categories = new List<Category
         }
 
         /*
