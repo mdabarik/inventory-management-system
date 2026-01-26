@@ -83,8 +83,6 @@
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/compressed/p4wy4sud35-muycvpuwrr.gz
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/compressed/fw0g35eywu-87fc7y1x7t.gz
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/compressed/tjrls2hvfg-mlv21k5csn.gz
-/Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/compressed/5pdjfu7djo-j4qcm5s3rp.gz
-/Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/compressed/z0qg9z5efz-j4qcm5s3rp.gz
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/staticwebassets.build.json
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/staticwebassets.build.json.cache
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/staticwebassets.development.json
@@ -492,3 +490,5 @@
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/compressed/5pdjfu7djo-n47di9q8ge.gz
+/Users/barik/Desktop/dotnet/InventoryManagementSystem/InventoryManagementSystem/obj/Debug/net9.0/compressed/z0qg9z5efz-n47di9q8ge.gz
