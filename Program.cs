@@ -1,8 +1,4 @@
-
-
-
-
-using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Database;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -82,5 +82,3 @@ dotnet ef migrations add AddCustomerTable
 dotnet ef database update
 -- done --
 
-
-

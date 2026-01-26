@@ -1,6 +1,7 @@
+using InventoryManagementSystem.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace InventoryManagementSystem.Models
+namespace InventoryManagementSystem.Database
 {
     public class IMSDBContext : DbContext
     {
