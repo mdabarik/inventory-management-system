@@ -21,11 +21,11 @@ namespace InventoryManagementSystem.Models
         
         [Required]
         public int CategoryId { get; set; }
-        public Category? Categories { get; set; }
+        public Category? Category { get; set; }
 
         [Required]
         public int SupplierId { get; set; }
-        public Supplier? Suppliers { get; set; }
+        public Supplier? Supplier { get; set; }
 
     }
 }

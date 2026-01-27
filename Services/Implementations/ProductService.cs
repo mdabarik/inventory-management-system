@@ -18,7 +18,7 @@ namespace InventoryManagementSystem.Services.Implementations
 
         public async Task<IEnumerable<Product>> GetAllProductAsync()
         {
-            return await _context.Product.Include(p => p.Categories).Include(p => p.Suppliers).ToListAsync();
+            return await _context.Product.Include(p => p.Category).Include(p => p.Category).Include(p => p.Supplier).ToListAsync();
         }
         
         public async Task<Product?> GetProductByIdAsync(int id)
