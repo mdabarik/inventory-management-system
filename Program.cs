@@ -11,7 +11,8 @@ builder.Services.AddDbContext<IMSDBContext>(options =>
         new MySqlServerVersion(new Version(8, 0, 36))
     ));
 
-builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductReader, ProductService>();
+builder.Services.AddScoped<IProductWriter, ProductService>();
 
 builder.Services.AddControllersWithViews()
     .AddRazorRuntimeCompilation();

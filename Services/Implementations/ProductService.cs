@@ -7,7 +7,7 @@ using InventoryManagementSystem.Data;
 
 namespace InventoryManagementSystem.Services.Implementations
 {
-    public class ProductService : IProductService
+    public class ProductService : IProductReader, IProductWriter
     {
         private readonly IMSDBContext _context;
 
