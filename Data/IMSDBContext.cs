@@ -7,6 +7,8 @@ namespace InventoryManagementSystem.Data
     {
         public IMSDBContext(DbContextOptions<IMSDBContext> options) : base(options) { }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
     }
 }
