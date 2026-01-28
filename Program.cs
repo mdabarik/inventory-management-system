@@ -14,7 +14,9 @@ builder.Services.AddDbContext<IMSDBContext>(options =>
 builder.Services.AddScoped<IProductReader, ProductService>();
 builder.Services.AddScoped<IProductWriter, ProductService>();
 builder.Services.AddScoped<ICategoryReader, CategoryService>();
+builder.Services.AddScoped<ICategoryWriter, CategoryService>();
 builder.Services.AddScoped<ISupplierReader, SupplierService>();
+builder.Services.AddScoped<ISupplierWriter, SupplierService>();
 
 
 builder.Services.AddControllersWithViews()
