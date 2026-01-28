@@ -19,12 +19,17 @@ public class ProductController : Controller
         _sreader = sreader;
     }
 
-    public async Task<IActionResult> Index()
+    // public async Task<IActionResult> Index()
+    // {
+    //     var products = await _reader.GetAllProductAsync();
+    //     return View(products);
+    // }
+
+    public async Task<IActionResult> Index(string searchText)
     {
-        var products = await _reader.GetAllProductAsync();
+        var products = await _reader.SearchProductsAsync(searchText);
         return View(products);
     }
-
     public async Task<IActionResult> Details(int id)
     {
         var product = await _reader.GetProductByIdAsync(id);

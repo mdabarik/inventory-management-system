@@ -20,6 +20,21 @@ namespace InventoryManagementSystem.Services.Implementations
         {
             return await _context.Products.Include(p => p.Category).Include(p => p.Supplier).ToListAsync();
         }
+
+        public async Task<List<Product>> SearchProductsAsync(string searchText)
+        {
+            IQueryable<Product> query = _context.Products.Include(p => p.Category).Include(p => p.Supplier);
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                query = query.Where(p =>
+                    p.Name.Contains(searchText) ||
+                    p.Description.Contains(searchText));
+            }
+
+            return await query.ToListAsync();
+        }
+
         
         public async Task<Product?> GetProductByIdAsync(int id)
         {

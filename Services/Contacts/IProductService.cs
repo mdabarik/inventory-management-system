@@ -10,6 +10,7 @@ namespace InventoryManagementSystem.Services.Contacts
     {
         Task<IEnumerable<Product>> GetAllProductAsync();
         Task<Product?> GetProductByIdAsync(int id);
+        Task<List<Product>> SearchProductsAsync(string searchText);
     }
 
     public interface IProductWriter
