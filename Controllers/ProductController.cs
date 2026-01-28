@@ -53,6 +53,24 @@ public class ProductController : Controller
         return View(product);
     }
 
+    public async Task<IActionResult> Edit(int id)
+    {
+        var product = await _reader.GetProductByIdAsync(id);
+        if (product == null) return NotFound();
+
+        await PopulateDropdownEdit(product.CategoryId, product.SupplierId);
+        return View(product);
+    }
+    private async Task PopulateDropdownEdit(int? selectedCategoryId = null, int? selectedSupplierId = null)
+    {
+        var categories = await _creader.GetAllCategoryAsync();
+        var suppliers = await _sreader.GetAllSupplierAsync();
+
+        ViewBag.Categories = new SelectList(categories, "Id", "Name", selectedCategoryId);
+        ViewBag.Suppliers = new SelectList(suppliers, "Id", "Name", selectedSupplierId);
+    }
+
+    [HttpPost]
     public async Task<IActionResult> Edit(Product product)
     {
         await PopulateDropdown();
