@@ -62,5 +62,12 @@ namespace InventoryManagementSystem.Controllers
             return View(category);
         }
 
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _writer.DeleteCategoryByIdAsync(id);
+            if (!deleted) return NotFound();
+            return RedirectToAction("Index");
+        }
+
     }
 }

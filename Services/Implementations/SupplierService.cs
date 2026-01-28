@@ -65,7 +65,5 @@ namespace InventoryManagementSystem.Services.Implementations
             return true;
         }
 
-
-
     }
 }

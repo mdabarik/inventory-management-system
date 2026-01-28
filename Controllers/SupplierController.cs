@@ -62,5 +62,12 @@ namespace InventoryManagementSystem.Controllers
             }
             return View(supplier);
         }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _writer.DeleteSupplierByIdAsync(id);
+            if (!deleted) return NotFound();
+            return RedirectToAction("Index");
+        }
      }
 }

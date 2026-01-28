@@ -62,6 +62,5 @@ namespace InventoryManagementSystem.Services.Implementations
             await _context.SaveChangesAsync();
             return true;
         }
-        
     }
 }
