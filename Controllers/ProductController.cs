@@ -13,15 +13,12 @@ public class ProductController : Controller
         _writer = writer;
     }
 
-    [HttpGet("")]
-    [Route("Index")]
     public async Task<IActionResult> Index()
     {
         var products = await _reader.GetAllProductAsync();
         return View(products);
     }
 
-    [HttpGet("{id}")]
     public async Task<IActionResult> Details(int id)
     {
         var product = await _reader.GetProductByIdAsync(id);
@@ -29,7 +26,6 @@ public class ProductController : Controller
         return View(product);
     }
 
-    [HttpPost("Create")]
     public async Task<IActionResult> Create(Product product)
     {
         if (ModelState.IsValid)
@@ -40,7 +36,6 @@ public class ProductController : Controller
         return View(product);
     }
 
-    [HttpPost("Edit")]
     public async Task<IActionResult> Edit(Product product)
     {
         if (ModelState.IsValid)
@@ -52,7 +47,6 @@ public class ProductController : Controller
         return View(product);
     }
 
-    [HttpPost("DeleteConfirmed/{id}")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var deleted = await _writer.DeleteProductByIdAsync(id);
