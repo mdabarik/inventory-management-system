@@ -22,6 +22,10 @@ public class ProductController : Controller
     public async Task<IActionResult> Details(int id)
     {
         var product = await _reader.GetProductByIdAsync(id);
+        if (product == null)
+        {
+            View("Error", "Something went wrong");
+        }
         if (product == null) return NotFound();
         return View(product);
     }
@@ -47,7 +51,7 @@ public class ProductController : Controller
         return View(product);
     }
 
-    public async Task<IActionResult> DeleteConfirmed(int id)
+    public async Task<IActionResult> Delete(int id)
     {
         var deleted = await _writer.DeleteProductByIdAsync(id);
         if (!deleted) return NotFound();

@@ -40,7 +40,50 @@
                     <td>
                         <a asp-action="Details" asp-route-id="@product?.Id" class="btn btn-info btn-sm">View</a>
                         <a asp-action="Edit" asp-route-id="@product?.Id" class="btn btn-warning btn-sm">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@product?.Id" class="btn btn-danger btn-sm">Delete</a>
+                        @* <a asp-action="Delete" asp-route-id="@product?.Id" class="btn btn-danger btn-sm">Delete</a> *@
+
+                        @* ------ Delete Confirmation Modal --- Start ------ *@
+                        <button type="button"
+                                class="btn btn-danger btn-sm"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                                data-product-id="@product?.Id"
+                                data-product-name="@product?.Name">
+                            Delete
+                        </button>
+
+                        <div class="modal fade" id="deleteModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form method="get" asp-action="Delete" asp-route-id="@product?.Id">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Confirm Delete</h5>
+                                            <button type="button" class="btn-close"
+                                                    data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            Are you sure you want to delete
+                                            <strong id="productName"></strong>?
+                                        </div>
+
+                                        <input type="hidden" name="id" id="productId" />
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-danger">
+                                                Yes, Delete
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        @* ------ Delete Confirmation Modal --- End ------ *@
+
+
+
                     </td>
                 </tr>
             }
@@ -53,3 +96,8 @@
         }
     </tbody>
 </table>
+
+
+
+
+
