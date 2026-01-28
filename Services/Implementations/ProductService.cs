@@ -18,12 +18,12 @@ namespace InventoryManagementSystem.Services.Implementations
 
         public async Task<IEnumerable<Product>> GetAllProductAsync()
         {
-            return await _context.Products.Include(p => p.Category).Include(p => p.Category).Include(p => p.Supplier).ToListAsync();
+            return await _context.Products.Include(p => p.Category).Include(p => p.Supplier).ToListAsync();
         }
         
         public async Task<Product?> GetProductByIdAsync(int id)
         {
-            return await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Products.Include(p => p.Category).Include(p => p.Supplier).FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<Product> AddProductAsync(Product product)
