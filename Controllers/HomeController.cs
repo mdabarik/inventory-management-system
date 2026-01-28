@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Services.Contacts;
 
 namespace InventoryManagementSystem.Controllers;
 

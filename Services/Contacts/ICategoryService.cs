@@ -10,6 +10,8 @@ namespace InventoryManagementSystem.Services.Contacts
     {
         Task<IEnumerable<Category>> GetAllCategoryAsync();
         Task<List<Category>> SearchCategoryAsync(string searchText);
+        Task<Category?> GetCategoryByIdAsync(int id);
+        
     }
 
     public interface ICategoryWriter

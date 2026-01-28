@@ -22,6 +22,11 @@ namespace InventoryManagementSystem.Services.Implementations
             return await _context.Suppliers.ToListAsync();
         }
 
+        public async Task<Supplier?> GetSupplierByIdAsync(int id)
+        {
+            return await _context.Suppliers.FirstOrDefaultAsync(s => s.Id == id);
+        }
+
         public async Task<List<Supplier>> SearchSupplierAsync(string searchText)
         {
             IQueryable<Supplier> query = _context.Suppliers;

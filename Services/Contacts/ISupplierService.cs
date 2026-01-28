@@ -10,6 +10,7 @@ namespace InventoryManagementSystem.Services.Contacts
     {
         Task<IEnumerable<Supplier>> GetAllSupplierAsync();
         Task<List<Supplier>> SearchSupplierAsync(string searchText);
+        Task<Supplier?> GetSupplierByIdAsync(int id);
     }
     public interface ISupplierWriter
     {
