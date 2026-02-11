@@ -1,4 +1,4 @@
-# Inventory Management System (Dotnet MVC)
+# Inventory Management System (.NET C# MVC)
 
 # Data Model
 
